@@ -1,0 +1,36 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    HashSet<Integer> h =new HashSet<Integer>();
+		System.out.println("Enter the size ");
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		System.out.println("Enter the elements ");
+		for(int i=0;i<n;i++)
+		{
+		    a[i]=sc.nextInt();
+		}
+		for(int i=0;i<a.length;i++)
+		{
+		    for(int j=0;j<a.length;j++)
+		    {
+		        if(a[i]==a[j]&&i!=j)
+		        {
+		            h.add(a[i]);
+		            break;
+		        }
+		        System.out.println("No element is repeated");
+		    }
+		}
+		System.out.println("Repeated element is ");
+		System.out.println(h);
+	}
+}
+
+Output______________________________________________________________
+Enter the size 
+5
+Enter the elements 1 2 3 4 3
+Repeated element is [3]
